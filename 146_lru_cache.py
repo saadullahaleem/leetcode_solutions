@@ -32,7 +32,7 @@ class LRUCache:
         :rtype: void
         """
         
-        if len(self.queue) == self.capacity:
+        if key not in self.queue and len(self.queue) == self.capacity:
             key_to_remove = self.queue.popleft()
             del self.dict[key_to_remove]
         
